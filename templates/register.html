@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../static/login.css">
     <title>Register</title>
 </head>
 <body>
     <form class="container" onclick="" method="POST" action="/register">
-        {{ form.csrf_token }}
         <div class="top"></div>
         <div class="bottom"></div>
         <div class="center">
@@ -26,13 +24,12 @@
             <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
         </div>
 
-
         <div class="form-group">
             <label for="password"></label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
         </div>
 
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="slct" class="select">
                 <select id="slct" required>
                   <option value="" disabled selected>Country</option>
@@ -235,22 +232,13 @@
                   <option value="Other">Other</option>
                 </select>
             </label>
-        </div> -->
-        <div class="form-group">
-            <label for="country"></label>
-            {{ form.country(class="form-control") }}
-            {% for error in form.country.errors %}
-                <span style="color: red;">{{ error }}</span>
-            {% endfor %}
         </div>
+
         <div>
             <button>Register</button>
         </div>      
     </form>
     
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>
 
